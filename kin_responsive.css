@@ -18,7 +18,10 @@
   .table1-section{
     font-size:13px;
   }
-  
+
+  .caution0{
+    font-size:10px;
+  } 
   
 }
 
@@ -51,9 +54,6 @@
 /*メッセージエリアのテーブル内の説明文字サイズを小さくする*/
 .table1-section{
   font-size:12px;
-}
-.caution0{
-  font-size:10px;
 }
   /*フッター*/
  footer.heading h2{
