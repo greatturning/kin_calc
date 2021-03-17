@@ -106,7 +106,7 @@ h3:before, h3:after{
 }
 .container {
   max-width:1170px;/* max-widthを1170px.それ以上は画面が大きくなっても表示を変更しない */
-  min-width:500px;
+
   width:100%;
   padding: 0 15px;
   margin: 0 auto;
