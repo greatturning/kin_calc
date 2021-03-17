@@ -1,0 +1,63 @@
+/* タブレット向けレイアウト */
+
+/* ブレイクポイントが1000px以下のときのメディアクエリを設定してください */
+@media (max-width :1000px) {
+  /* 「.container op-wrapper h1」のfont-sizeを32pxに指定 */
+  .section-title h3 {
+    font-size:32px;
+  }
+  
+  /* 「.heading h2」のfont-sizeを20pxに指定 */
+  .heading h2{
+    font-size:20px;
+  }
+  .heading h3{
+    font-size:12px;
+  }
+  /*テーブル内の文字を少し小さくする*/
+  .table1-section{
+    font-size:13px;
+  }
+  
+  
+}
+
+/* ブレイクポイントが670px以下の時のメディアクエリを設定してください */
+@media (max-width:670px ) {
+  /* .イメージエリア：lessonのwidthを100%に指定してください */
+  .lesson {
+    width: 100%;
+   }
+   .lessonOto {
+    width: 100%;
+   }
+  
+  /* <footer>の中身を中央寄せにしてください。 */
+  footer {
+    text-align:center;
+  }
+  /* .btnのwidthを100%に指定してください */
+  .btn {
+    width :100%;
+  }
+
+/* ヘッダーのメニューを小さくする*/
+.header-right-menu{
+  font-size:13px;
+}
+/*メッセージエリアのテーブル内の説明文字サイズを小さくする*/
+.table1-section{
+  font-size:12px;
+}
+  /*フッター*/
+ footer.heading h2{
+  font-size:15px;
+  
+}
+footer.heading h3{
+  font-size:10px;
+ 
+}
+
+
+}

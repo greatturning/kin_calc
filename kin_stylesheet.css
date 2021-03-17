@@ -1,0 +1,370 @@
+/*----- ここからレスポンシブ対応 -----*/
+* {
+  box-sizing: border-box;
+}
+/*----- ここまでレスポンシブ対応 -----*/
+/*-------  ここから色  --------*/
+.red {
+  color:red;
+}
+.white {
+  color:black;
+}
+.blue {
+  color:blue;
+}
+.yellow {
+  color:#ccda14;
+}
+.green {
+  color:green;
+}
+.bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration-line : underline;
+}
+/** マーカー：https://kagesai.net/css-marker-design/ */
+.marker_red {
+  background: linear-gradient(transparent 0%, red 0%);
+  font-weight: bold; 
+  text-decoration-line : underline;
+}
+.marker_white {
+  background: linear-gradient(transparent 0%, white 0%);
+  font-weight: bold; 
+  text-decoration-line : underline;
+}
+.marker_blue {
+  background: linear-gradient(transparent 0%, blue 0%);
+  font-weight: bold; 
+  text-decoration-line : underline;
+}
+.marker_yellow {
+  background: linear-gradient(transparent 0%, yellow 0%);
+  font-weight: bold; 
+  text-decoration-line : underline;
+}
+.marker_green {
+  background: linear-gradient(transparent 0%, green 0%);
+  font-weight: bold; 
+  text-decoration-line : underline;
+}
+/*-------  ここまで色  --------*/
+/*-------  ここから共通のCSS  --------*/
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all .3s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+h4, h5 {
+  color: #444;
+  font-size: 18px;
+}
+
+h3:before, h3:after{
+  content: "";
+  background-color: #616161;
+  display: inline-block;
+
+  height: 1px;
+  vertical-align: middle;
+}
+
+
+/* clearクラスにfloatを解除するためのCSSを記述してください */
+.clear {
+  clear:left;
+}
+.container {
+  max-width:1170px;/* max-widthを1170px.それ以上は画面が大きくなっても表示を変更しない */
+  min-width:500px;
+  width:100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section-title {
+  color: #555;
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+.section-title h3 {
+  margin: 10px 0;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.gray-section {
+  background: #f4f4f4;
+  color: #888;
+}
+hr.example1 {
+  height: 1px;
+  background-color: #fffaf0;
+  border: 1px solid;
+  border-color: #c40000 #ffdfe2 #ffdfe2 #c40000;
+  color: grey;
+}
+/*-------  ここまで共通のCSS  --------*/
+
+/*--------- ここからボタン --------*/
+.btn-wrapper {
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+/*-------- ここまでボタン --------*/
+
+/*-------  ここからheader  --------*/
+header {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color:rgba(24, 214, 183, 0.9);
+  line-height: 50px;
+  /*box-shadow: -1px 1px 1px rgba(0,0,0,0.1);*/
+  z-index: 10;
+
+}
+
+.header-left {
+  float: left;
+  padding-top:5px;
+}
+
+/* header-rightクラスのCSSを指定してください */
+.header-right{
+  float:right;
+  background-color:rgba(255, 255, 255, 0);  
+  transition:all 0.5s;
+}
+/* header-rightの中の<a>のCSSを指定してください */
+.header-right a{
+  line-height:50px;
+  color:white;
+  display:block;
+}
+
+/* header-rightクラスにhoverしたときのCSSを指定してください */
+.header-right a:hover{
+  background-color:rgba(255, 255, 255, 0.5);
+}
+.header-right-menu li {
+  float: left;
+  display: block;
+}
+
+.header-right-menu a {
+  color: #323A45;
+  font-weight: 700;
+  text-decoration: none;
+  padding:0 5px;
+}
+
+
+.header-right-menu a:hover {
+  color: #5983ff;
+  transition: color .3s;
+}
+/*-------  ここまでheader  --------*/
+
+/*-------  ここから今日のKIN  --------*/
+.todayKINs-section {
+  margin-top: 50px;
+  color:black;
+}
+.todayKINs-section p {
+ display:inline;/*改行しない*/
+}
+.todayKINs-section img {
+  display: inline-block;
+}
+.yourKIN {
+  font-size: 20px;
+}
+/*-------  ここまで今日のKIN  --------*/
+
+/*------- ここから 紋章イメージ------------------*/
+.lesson-wrapper {
+  padding-bottom: 0;
+  padding-left: 1%;
+  padding-right: 1%;
+  /*background-color: #fffaf0;*/
+  text-align: center;
+  color:black;
+}
+
+.lesson {
+  float: left;
+  width: 30%;
+}
+.lessonOto {
+  float: left;
+  width: 40%;
+}
+
+.lesson-icon {
+  position: relative;
+}
+
+.lesson-icon p {
+  position: absolute;
+  top: 44%;
+  width: 100%;
+  color: white;
+  display:block;
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: black;
+}
+
+.caution0{
+  font-size:5px;
+  color: black;
+  display: inline-block;
+  text-align: left;
+}
+/*------- ここまで紋章イメージ ------------------*/
+
+/*-------  ここからあなたのKIN  --------*/
+.yourKINs-section {
+  color:black;
+}
+.yourKINs-section  a{
+  text-decoration: underline;
+  font-weight: bold;
+  color:blue;
+}
+.calender1{
+  display:inline;/*改行しない*/
+}
+#yourKIN {
+  font-size: 20px;
+}
+/*-------  ここまであなたのKIN  --------*/
+
+/*--------- ここからメッセージ -------------------------*/
+/* message-wrapperクラスのCSSを指定してください */
+.message-wrapper{
+  border-bottom:1px solid #eee;
+  padding-bottom:20px;
+}
+/* messageのCSSを指定してください */
+.message{
+  background-color:#5dca88;
+  padding:15px 40px;
+    /* カーソルの形をpointerにしてください */
+    cursor:pointer;  
+    /* box-shadowをつけてください */
+    box-shadow:0 7px #1a7940;
+    text-align: center;
+    border: 1px solid #232323;
+}
+
+/* headingの中の<h3>のCSSを指定してください */
+.heading h3{
+  font-weight:normal;
+  
+}
+.heading h2 {
+  font-weight: normal;
+}
+.heading h3 {
+  font-weight: normal;
+}
+/* messageクラスがクリックされているときのCSSを指定してください */
+.message:active{
+  box-shadow:none;
+  position:relative;
+  top:7px;
+}
+.table1-section {
+  border: solid 1px;              /* 枠線指定 */
+  border-collapse:  collapse;     /* セルの線を重ねる */
+  padding: 10px;      /* 余白指定 */
+  font-size: 15px;
+}
+.table1-section th,td{
+  border: solid 1px;              /* 枠線指定 */
+  border-collapse:  collapse;     /* セルの線を重ねる */
+  padding: 10px;      /* 余白指定 */
+}
+.table1-section th{
+  vertical-align:center;
+  text-align:center;
+}
+.table1-section td{
+  vertical-align:top;
+}
+/*--------- ここまでメッセージ -------------------------*/
+
+/*------－ここからフッター-------------------*/
+/* <footer>のCSSを指定してください */
+footer {
+  padding:2px 2px;
+  background-color: rgba(24, 214, 183, 0.9);
+  text-align: center;
+  
+}
+/* <footer>の中の<img>のCSSを指定してください */
+footer img{
+  width:125px;
+}
+
+/* <footer>の中の<p>のCSSを指定してください */
+footer p{
+  color:black;
+  font-size:12px;
+}
+/*------－ここまでフッター-------------------*/
