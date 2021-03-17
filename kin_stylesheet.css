@@ -357,10 +357,7 @@ footer {
   text-align: center;
   
 }
-/* <footer>の中の<img>のCSSを指定してください */
-footer img{
-  width:125px;
-}
+
 
 /* <footer>の中の<p>のCSSを指定してください */
 footer p{
