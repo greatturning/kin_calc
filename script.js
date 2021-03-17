@@ -48,6 +48,7 @@ $(function(){
   */
   window.onload = onLoad;
   function onLoad() {
+    fitWindow("targetLayer");
     //今日の日付を取得
     var today = new Date()  ;
     //(不具合）Microsoft Edgeの場合 +18時間 today.setTime(today.getTime() + 1000*60*60*18);// JSTに変換 +18時間
