@@ -114,6 +114,9 @@ window.onload = onLoad;
     //イメージ前の太陽の紋章
     var imgMae= document.getElementById("imgMae");
     var imgMaeURL = "./img/monsho/" + kinMaeNo + gMaeList[kinMaeNo] + ".jpg";
+    if (kinMaeNo === 0 ) { 
+      imgMaeURL = "./img/monsho/" + 20 +  gMaeList[kinMaeNo] + ".jpg";;
+    }
     console.log(imgMaeURL);
     imgMae.src = imgMaeURL;
     imgMae.title = imgMaeURL;
@@ -171,6 +174,10 @@ document.getElementById("yourkin-button").onclick = function() {
   //イメージ前の太陽の紋章
   var imgMae= document.getElementById("imgMaeY");
   var imgMaeURL = "./img/monsho/" + kinMaeNo + gMaeList[kinMaeNo] + ".jpg";
+  if (kinMaeNo === 0 ) { 
+    imgMaeURL = "./img/monsho/" + 20 +  gMaeList[kinMaeNo] + ".jpg";;
+  }
+
   console.log(imgMaeURL);
   imgMae.src = imgMaeURL;
   imgMae.title = imgMaeURL;
