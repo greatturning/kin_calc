@@ -1,19 +1,19 @@
 <!DOCTYPE html>
   <!--
-    タイトル：グレートターニング様向けKIN計算ページ
+    タイトル：グレートターニング様向けKIN計算ページ 
     内容： 
       １．今日の日付からその日のKINを算出し、メッセージを表示する。
       ２．指定した年月のKINを算出し、メッセージを表示する。
     初版：2021-3-29(KIN105　赤い蛇-赤い蛇　第３の城)
-    発行元：スーパー事務局 
+    発行元：スーパー事務局
   -->
 <html lang="ja">
   <head>
     <meta charset="utf-8">
     <!-- レスポンシブ対応：viewportを読み込むための<meta>タグ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>KIN計算のページ</title>
+    <link rel="shortcut icon" href="./img/rogoOnly.png">
+    <title>今日のKINは？あなたのKINは？</title>
     <link rel="stylesheet" href="kin_stylesheet.css">
     <link rel="stylesheet" href="kin_responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -25,33 +25,29 @@
     <!-- ヘッダー -->
     <header> 
       <div class="container">
-        <div class="header-left">
-          <div>
-           <img src="./img/rogo.png" width="180px" paddingtop="5px">
-          </div>
-        </div>
-        <div class="header-right"> 
-          <ul class="header-right-menu">
+        <div class="header-left"> 
+  
+          <ul class="header-left-menu"> 
             <li>
-              <a href="#todayKINs">今日のKINは</a>
+              <img src="./img/rogoOnly.png" width="50px" padding-top="0px">
+            </li>             
+            <li>
+              <a href="#todayKINs" >今日のKINは？</a>
             </li>
             <li>
-              <a href="#yourKINs">あなたのKINは</a>
+              <a href="#yourKINs">あなたのKINは？</a>
             </li>
           </ul>
-        </div>
-        
+        </div>     
       </div>
     </header>
-    
-
-
-    <!-- －今日のKINは？-->
+    <!-- －今日の"KINは？-->
     <!-- －今日のKINのメッセージ-->
     <div id="todayKINs" class="todayKINs-section" >
       <div class="container">
+        <hr class="hr.example1">
         <div class="section-title">
-          <h3>今日のKINは？</h3>
+          <h3>今日のKINは？?</h3>
         </div>
         <div >
           銀河のマヤツォルキンでは、今日  <p id="today0"></p>  は<br>
@@ -94,7 +90,7 @@
 
               </div>
             </div>
-             <!-- clearクラスをもつ<div>タグを追加してください -->
+             <!-- clearクラス -->
              <div class="clear"></div>  
             
           </div>
@@ -130,65 +126,24 @@
               <li class="yellow bold">第４の城　　黄（熟成・答えが見えてくる）</li>
               <li class="green bold">第５の城　　緑（まとめ・仕上げ）</li>
             </ul>
+          <br>    
+          <a href="http://great-turning.main.jp/howto/" alt=" 銀河のマヤカレンダーの使い方" target="_blank"  rel="noopener" color="red"> 銀河のマヤカレンダーの使い方についてはこちらから。</a>  
         </div>
-      </div>
         <br>
-        <br> <br> <br> <br>
+        <br> 
     </div>
-   
-    <!--hr style="border:0;border-top:1px solid;background-color:#fffaf0;"-->
-    <hr class="hr.example1">
+    
     <!-- あなたのKINは？-->
-    <div id="yourKINs" class="yourKINs-section">
+    <div id="yourKINs"  class="yourKINs-section">
       <div class="container">
+        <hr class="hr.example1"> 
         <div class="section-title">
+          
           <h3>あなたのKINは？</h3>
         </div>
         <div class="calender1">
-          <p>あなたの生年月日を入力して下さい。</p>
-          <select id="_yy" class="green2" name="_yy">
-            <option value="1868">1868(明治1)年</option>
-            <option value="1869">1869(明治2)年</option>
-            <option value="1870">1870(明治3)年</option>
-            <option value="1871">1871(明治4)年</option>
-            <option value="1872">1872(明治5)年</option>
-            <option value="1873">1873(明治6)年</option>
-            <option value="1874">1874(明治7)年</option>
-            <option value="1875">1875(明治8)年</option>
-            <option value="1876">1876(明治9)年</option>
-            <option value="1877">1877(明治10)年</option>
-            <option value="1878">1878(明治11)年</option>
-            <option value="1879">1879(明治12)年</option>
-            <option value="1880">1880(明治13)年</option>
-            <option value="1881">1881(明治14)年</option>
-            <option value="1882">1882(明治15)年</option>
-            <option value="1883">1883(明治16)年</option>
-            <option value="1884">1884(明治17)年</option>
-            <option value="1885">1885(明治18)年</option>
-            <option value="1886">1886(明治19)年</option>
-            <option value="1887">1887(明治20)年</option>
-            <option value="1888">1888(明治21)年</option>
-            <option value="1889">1889(明治22)年</option>
-            <option value="1890">1890(明治23)年</option>
-            <option value="1891">1891(明治24)年</option>
-            <option value="1892">1892(明治25)年</option>
-            <option value="1893">1893(明治26)年</option>
-            <option value="1894">1894(明治27)年</option>
-            <option value="1895">1895(明治28)年</option>
-            <option value="1896">1896(明治29)年</option>
-            <option value="1897">1897(明治30)年</option>
-            <option value="1898">1898(明治31)年</option>
-            <option value="1899">1899(明治32)年</option>
-            <option value="1900">1900(明治33)年</option>
-            <option value="1901">1901(明治34)年</option>
-            <option value="1902">1902(明治35)年</option>
-            <option value="1903">1903(明治36)年</option>
-            <option value="1904">1904(明治37)年</option>
-            <option value="1905">1905(明治38)年</option>
-            <option value="1906">1906(明治39)年</option>
-            <option value="1907">1907(明治40)年</option>
-            <option value="1908">1908(明治41)年</option>
-            <option value="1909">1909(明治42)年</option>
+          <p>あなたの生年月日を入力して下さい。</p><br>
+          <select id="_yy" name="_yy">
             <option value="1910">1910(明治43)年</option>
             <option value="1911">1911(明治44)年</option>
             <option value="1912">1912(明治45/大正1)年</option>
@@ -329,7 +284,7 @@
             <option value="2049">2049(令和31)年</option>
             <option value="2050">2050(令和32)年</option>
           </select>
-          <select id="_mm" class="green2" name="_mm">
+          <select id="_mm" name="_mm">
             <option selected="selected" value="1">1月</option>
             <option value="2">2月</option>
             <option value="3">3月</option>
@@ -343,7 +298,7 @@
             <option value="11">11月</option>
             <option value="12">12月</option>
           </select>
-          <select id="_dd" class="green2" name="_dd">
+          <select id="_dd" name="_dd">
             <option selected="selected" value="1">1日</option>
             <option value="2">2日</option>
             <option value="3">3日</option>
@@ -378,52 +333,32 @@
           </select>
           <br />
         </div>
+        <div class="clear"></div>
         <br><br>
         <!-- ボタン-->
         <span id="yourkin-button" class="btn message">あなたのK I Nは</span>
-  
         <div >
-          <p id="yourKIN"></p><br>
+          <br>
+          <p id="yourKIN"></p>
         </div>
 
         <!-- －あなたのKINの紋章の意味-->
-        <div class="lesson-wrapper" >
-          <div class="container">
-            <div class="lessons">
-              <div class="lesson">
-                <p class="text-contents">あなたの13日間の太陽の紋章<br>
-                  （ウェイブスペル）は、</p> 
-                <div class="lesson-icon">
-                  <img id="imgUshiroY" src="" width="95%" >
-                </div>
-              </div>
-              <div class="lessonOto" >
-                <p class="text-contents"><br>あなたの銀河の音は、</p>
-                <div class="lesson-icon">
-                  <img id="imgOtoY" src="" width="95%">
-                </div>
-
-              </div>
-              <div class="lesson" >
-                <p class="text-contents"><br>あなたの太陽の紋章は、</p>
-                <div class="lesson-icon">
-                  <img id="imgMaeY" src="" width="95%">
-                </div>
-
-              </div>
-            </div>
-             <!-- clearクラスをもつ<div>タグを追加してください -->
-             <div class="clear"></div>  
-            
+        <div class="container">
+            <div class="yourKINImageClass">
+              <img id="imgOtoY" src="">
+              <img id="imgMaeY" src="" >
+              <img id="imgUshiroY" src=""  >
           </div>
-          
+          <div class="clear"></div>  
+          <p class="caution0"> 資料提供  <a href="http://asuwa.info/index.html"  alt="あすわ" target="_blank" >あすわ</a></p>
         </div>
+        <br>
         <p>
           このK I Nを持つ人が、どのような本質（今世の役割）、人生の波・流れ、大切な人との関係性を持つかについては、
-          <a href="http://great-turning.main.jp/" alt="マヤ鑑定" target="_blank"  rel="noopener">マヤ鑑定（http://great-turning.main.jp/)</a>でお伝えさせて頂きます。
+          <a href="http://great-turning.main.jp/maya/" alt="マヤ鑑定" target="_blank"  rel="noopener">マヤ鑑定</a>でお伝えさせて頂きます。
         </p> 
       </div>
-      <br><br><br><br><br>
+      <br><br>
     </div>  
     <hr class="hr.example1">
     <!--うるう年のカウント-->
@@ -436,6 +371,7 @@
 
         <p>「銀河のマヤ ツォルキン」のことを「マヤ暦」と紹介しているところが多いようです。<br>
         「マヤ暦」として紹介されているところでは、うるう年のカウントが異なりますのでご注意下さい。<br>
+        銀河のマヤでは、ホゼ・アグエイアス博士の定義を採用しています。<br>
         </p>
         <br>
         <p>うるう年2020年の例</p>
@@ -519,15 +455,21 @@
         <span class="caution0">（出典：「銀河のマヤカレンダー2021」）</span></p>
       </div>
     </div>
-
-
-
-
+    <br><br>
+    <!-- ナビゲーション(ホームページ、YOUTUBE) -->
+    <div class="guide-wrapper">
+      <div class="countainer">
+        <div class="guide">
+          <a href="http://great-turning.main.jp/#maya"  alt="銀河のマヤ一覧" target="_blank"  rel="noopener"><img src="./img/list-150x150.png" >銀河のマヤ一覧へ戻る＞</a>   
+          <a href="https://www.youtube.com/channel/UCuuYjAUKbdf1Odr4ZTzJ9iA"  alt="銀河のマヤひろちゃんねる＞" target="_blank"  rel="noopener"><img src="./img/youtube-1-150x150.png" sizes=(max-width:150px 100vw)>銀河のマヤひろちゃんねる＞</a>   
+        </div>
+      </div>
+    </div>
 
     <hr class="hr.example1">
 
+    <!-- グレートターニングの紹介 -->
     <div class="message-wrapper">
-      <!-- ここにコードを書いていきましょう -->
       <div class="container">
         <div class="heading">
           <h2><img src="./img/rogo.png"></h2>
@@ -547,3 +489,4 @@
      <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
+
