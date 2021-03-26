@@ -44,16 +44,24 @@
     width :100%;
   }
 
-/* ヘッダーのメニューを小さくする*/
-.header-left img {
-  width:100px;
-  }
-.header-right-menu{
-  font-size:13px;
+
+/* あなたのKINの紋章イメージを横幅いっぱいとする*/
+.yourKINImageClass {
+  width:100%;
+}
+.yourKINImageClass img{
+  width:30%;
 }
 /*メッセージエリアのテーブル内の説明文字サイズを小さくする*/
 .table1-section{
   font-size:12px;
+}
+.guide-wrapper {
+  text-align: left;
+}
+.guide a{
+    display:inline-block;/*改行しない*/
+   
 }
   /*フッター*/
  footer.heading h2{

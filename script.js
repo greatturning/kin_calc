@@ -18,27 +18,27 @@ $(function(){
   [	'黄色い太陽' ,'赤い竜',	'白い風',	'青い夜',	'黄色い種',	'赤い蛇',	
   '白い世界の橋渡し',	'青い手',	'黄色い星',	'赤い月',	'白い犬',	
   '青い猿',	'黄色い人',	'赤い空歩く人',	'白い魔法使い',	'青い鷲',	
-  '黄色い戦士',	'赤い地球',	'白い鏡',	'青い嵐'];
+  '黄色い戦士',	'赤い地球',	'白い鏡',	'青い嵐','黄色い太陽'];
 //後ろの太陽の紋章 idx_ushiro = kin/ 13(切り下げ)
 var gUshiroList = 
-['赤い竜',	'白い魔法使い',	'青い手',	'黄色い太陽',	'赤い空歩く人',	
-'白い世界の橋渡し',	'青い嵐',	'黄色い人',	'赤い蛇',	'白い鏡',	
-'青い猿',	'黄色い種',	'赤い地球',	'白い犬',	'青い夜',
-'黄色い戦士',	'赤い月',	'白い風',	'青い鷲','黄色い星'];
+  ['赤い竜',	'白い魔法使い',	'青い手',	'黄色い太陽',	'赤い空歩く人',	
+  '白い世界の橋渡し',	'青い嵐',	'黄色い人',	'赤い蛇',	'白い鏡',	
+  '青い猿',	'黄色い種',	'赤い地球',	'白い犬',	'青い夜',
+  '黄色い戦士',	'赤い月',	'白い風',	'青い鷲','黄色い星'];
 //後ろの太陽の紋章の順番
 var gUshiroIDList = [1,	14,	7,	20,	13,	6,	19,	12,	5,	18,	11,	4,	17,	10,	3,	16,	9,	2,	15,	8  ];
 //城のメッセージ
 var gShiroList = 
-['第1の城　創始・始まり',	'第2の城　洗練・初心にかえる',	'第3の城　変容・変化・展開',	'第4の城　熟成・答えが見えてくる',	'第5の城　母体・まとめ'];
+  ['第1の城　創始・始まり',	'第2の城　洗練・初心にかえる',	'第3の城　変容・変化・展開',	'第4の城　熟成・答えが見えてくる',	'第5の城　母体・まとめ'];
 //城の色
 var gShiroColorList =
-['green','red','white','blue','yellow'];
+  ['green','red','white','blue','yellow'];
 //サイクルのメッセージ
 var gCycleList = 
-['起「始まり（創始）」',	'承「初心にかえる（洗練）」',	'転「変化・展開（変容）」',	'結「答えが見えてくる（熟成）」'];
+  ['起「始まり（創始）」',	'承「初心にかえる（洗練）」',	'転「変化・展開（変容）」',	'結「答えが見えてくる（熟成）」'];
 //サイクルの色
 var gCycleColorList =
-['red','white','blue','yellow'];
+  ['red','white','blue','yellow'];
 
 
 /*
@@ -52,6 +52,7 @@ window.onload = onLoad;
     //今日の日付を取得
     var today = new Date()  ;
     //(不具合）Microsoft Edgeの場合 +18時間 today.setTime(today.getTime() + 1000*60*60*18);// JSTに変換 +18時間
+    //   2021-03時点では、Edgeの不具合。PCのタイムゾーン設定を別地域にして戻すとなおる。
  
     //console.log("today>" +today);
   
@@ -97,7 +98,6 @@ window.onload = onLoad;
     
     //52日周期では第(城)の城です。
     var dShiro0 = document.getElementById("dShiro0");
-    var dShiro1 = document.getElementById("dShiro1");
     dShiro1.innerHTML = shiroNo;
     dShiro0.classList.add('underline' );
     dShiro1.classList.add('bold' );
@@ -113,18 +113,16 @@ window.onload = onLoad;
 
     //イメージ前の太陽の紋章
     var imgMae= document.getElementById("imgMae");
-    var imgMaeURL = "./img/monsho/" + kinMaeNo + gMaeList[kinMaeNo] + ".jpg";
-    if (kinMaeNo === 0 ) { 
-      imgMaeURL = "./img/monsho/" + 20 +  gMaeList[kinMaeNo] + ".jpg";;
-    }
-    console.log(imgMaeURL);
+    var imgMaeURL = "./img/monsho/" + kinMaeNo + gMaeList[kinMaeNo%20] + ".jpg";
+
+    //console.log(imgMaeURL);
     imgMae.src = imgMaeURL;
     imgMae.title = imgMaeURL;
 
     //イメージ後ろの太陽の紋章
     var imgUshiro = document.getElementById("imgUshiro");
     var imgUshiroURL = "./img/monsho/" + gUshiroIDList[kinUshiroNo]  + gUshiroList[kinUshiroNo] + ".jpg";
-    console.log(imgUshiroURL);
+    //console.log(imgUshiroURL);
     imgUshiro.src = imgUshiroURL;
     imgUshiro.title = imgUshiroURL;
    
@@ -133,12 +131,13 @@ window.onload = onLoad;
     imgOto.title = "音" + otoNo + ":" + gOtoList[otoNo%13];
     imgOto.src = "./img/oto/oto" + otoNo + ".jpg";
   }
+ 
   /*
   関数名: document.getElementById("yourkin-button").onclick
   説明　: 「あなたのKINは」ボタンクリック時に起動。
           誕生日をselectboxから指定してもらい
-    あなたのKINを計算します。
-    ・誕生日に応じてKINを算出する
+          あなたのKINを計算します。
+    ・    誕生日に応じてKINを算出する
   */
 document.getElementById("yourkin-button").onclick = function() {
   //誕生日情報を取得
@@ -157,6 +156,7 @@ document.getElementById("yourkin-button").onclick = function() {
   //KIN計算
   var kin =  kinCalc(yyyy,mm,dd);
   //console.log("kin" + kin);
+
   //
   //HTMLに値を設定
   //
@@ -173,18 +173,16 @@ document.getElementById("yourkin-button").onclick = function() {
 
   //イメージ前の太陽の紋章
   var imgMae= document.getElementById("imgMaeY");
-  var imgMaeURL = "./img/monsho/" + kinMaeNo + gMaeList[kinMaeNo] + ".jpg";
-  if (kinMaeNo === 0 ) { 
-    imgMaeURL = "./img/monsho/" + 20 +  gMaeList[kinMaeNo] + ".jpg";;
-  }
+  var imgMaeURL = "./img/monsho/" + kinMaeNo + ".jpg"; ;
 
-  console.log(imgMaeURL);
+  // console.log(imgMaeURL);
   imgMae.src = imgMaeURL;
   imgMae.title = imgMaeURL;
 
   //イメージ後ろの太陽の紋章
   var imgUshiro = document.getElementById("imgUshiroY");
-  var imgUshiroURL = "./img/monsho/" + gUshiroIDList[kinUshiroNo]  + gUshiroList[kinUshiroNo] + ".jpg";
+  console.log(kinUshiroNo);
+  var imgUshiroURL = "./img/monsho/" + gUshiroIDList[kinUshiroNo]  + ".jpg";
   console.log(imgUshiroURL);
   imgUshiro.src = imgUshiroURL;
   imgUshiro.title = imgUshiroURL;
@@ -192,7 +190,8 @@ document.getElementById("yourkin-button").onclick = function() {
   //イメージ音
   var imgOto = document.getElementById("imgOtoY");
   imgOto.title = "音" + otoNo + ":" + gOtoList[otoNo%13];
-  imgOto.src = "./img/oto/oto" + otoNo + ".jpg";
+  imgOto.src = "./img/oto/" + otoNo + "（"+ gOtoList[otoNo%13] + "）.png";
+  console.log(imgOto.src);
 
 
 };
@@ -251,14 +250,20 @@ document.getElementById("yourkin-button").onclick = function() {
     関数名: kinMae(kin) 
     説明　: KINの前の太陽の紋章インデックスを返す
   */
-  function kinMae(kin) { return kin % 20;}
+  function kinMae(kin) {
+      var idx_mae = kin % 20;
+      var maeNo = idx_mae;
+      if (maeNo === 0 ) {maeNo = 20;}
+       return 20;
+    
+    }
 
   /*
     関数名: kinUshiro(kin) 
     説明　: KINの後ろの太陽の紋章インデックスを返す
   */
   function kinUshiro(kin) { 
-    //console.log("kinUshiro" + Math.floor(kin / 13));
+    console.log("kin=" + kin +" kinUshiro=" + Math.floor((kin -1)/ 13));
     return Math.floor((kin-1) / 13);
   }
 
