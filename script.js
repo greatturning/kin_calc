@@ -254,7 +254,7 @@ document.getElementById("yourkin-button").onclick = function() {
       var idx_mae = kin % 20;
       var maeNo = idx_mae;
       if (maeNo === 0 ) {maeNo = 20;}
-       return 20;
+       return maeNo;
     
     }
 
