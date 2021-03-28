@@ -66,7 +66,7 @@ window.onload = onLoad;
 
     //KIN計算
     var kin =  kinCalc(yyyy,mm,dd);//指定した日付のKIN
-    kin = 260;
+    
     //console.log("kin" + kin);
     var kinMaeNo = kinMae(kin);//KINに応じた前の太陽の紋章
     var kinUshiroNo = kinUshiro(kin);///KINに応じた後ろの太陽の紋章
