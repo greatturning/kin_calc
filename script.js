@@ -29,7 +29,7 @@ var gUshiroList =
 var gUshiroIDList = [1,	14,	7,	20,	13,	6,	19,	12,	5,	18,	11,	4,	17,	10,	3,	16,	9,	2,	15,	8  ];
 //城のメッセージ
 var gShiroList = 
-  ['第1の城　創始・始まり',	'第2の城　洗練・初心にかえる',	'第3の城　変容・変化・展開',	'第4の城　熟成・答えが見えてくる',	'第5の城　母体・まとめ'];
+  ['第1の城　創始・始まり',	'第2の城　洗練・初心にかえる',	'第3の城　変容・変化・展開',	'第4の城　熟成・答えが見えてくる',	'第5の城　母体・まとめ',	'第5の城　母体・まとめ'];
 //城の色
 var gShiroColorList =
   ['green','red','white','blue','yellow'];
@@ -66,12 +66,14 @@ window.onload = onLoad;
 
     //KIN計算
     var kin =  kinCalc(yyyy,mm,dd);//指定した日付のKIN
+    kin = 260;
     //console.log("kin" + kin);
     var kinMaeNo = kinMae(kin);//KINに応じた前の太陽の紋章
     var kinUshiroNo = kinUshiro(kin);///KINに応じた後ろの太陽の紋章
     var otoNo = kinOto(kin);//音
     var colorNo = kinUshiroNo % 4 ;//後ろの太陽の紋章の色
-    var shiroNo = Math.floor(kin / 52) +1;//城
+    var shiroNo = Math.floor((kin-1) / 52)+1 ;//城
+    
     //
     //HTMLに値を設定
     //
@@ -84,7 +86,8 @@ window.onload = onLoad;
     //(後ろの太陽の紋章)の13日間の
     var dUshiro = document.getElementById("dUshiro");
     dUshiro.innerHTML = gUshiroList[kinUshiroNo];
-    dUshiro.classList.add('marker_' + gCycleColorList[colorNo ]);
+    dUshiro.classList.add('marker_' + gCycleColorList[colorNo ]);//マーカー 
+    //dUshiro.classList.add( gCycleColorList[colorNo ],'bold','underline');//文字色
 
     //(音)日目
     var dOto1 = document.getElementById("dOto1");
@@ -105,11 +108,13 @@ window.onload = onLoad;
     //第(城)の城　（城メッセージ）の52日間の中で
     var dShiroMsg = document.getElementById("dShiroMsg");
     dShiroMsg.innerHTML = gShiroList[shiroNo-1];
-    dShiroMsg.classList.add('marker_' + gShiroColorList[shiroNo % 5 ] );
+    dShiroMsg.classList.add('marker_' + gShiroColorList[shiroNo % 5 ] );//マーカー 
+    //dShiroMsg.classList.add( gShiroColorList[shiroNo % 5 ] ,'bold','underline');//文字色
     //(サイクル)の13日間です。
     var dCycle  = document.getElementById("dCycle");
     dCycle.innerHTML = gCycleList[colorNo];
-    dCycle.classList.add('marker_' + gCycleColorList[colorNo ] );
+    dCycle.classList.add('marker_' + gCycleColorList[colorNo ],'bold','underline' );//マーカー 
+    //dCycle.classList.add( gCycleColorList[colorNo ],'bold','underline' );//文字色
 
     //イメージ前の太陽の紋章
     var imgMae= document.getElementById("imgMae");
