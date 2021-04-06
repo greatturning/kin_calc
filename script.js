@@ -3,7 +3,8 @@ $(function(){
   //内容：
   //  １．今日の日付からその日のKINを算出し、メッセージを表示する。
   //  ２．指定した年月のKINを算出し、メッセージを表示する。
-  //初版：2021-3-29(KIN105　赤い蛇-赤い蛇　第３の城)
+  //初版：2021-03-29(KIN105　赤い蛇-赤い蛇　第３の城)
+  //rev.1：2021-04-06(メッセージ内容の変更　今日のK I Nは？変更点 20210404.docx)
   //発行元：スーパー事務局
   
   //
@@ -27,15 +28,15 @@ var gUshiroList =
   '黄色い戦士',	'赤い月',	'白い風',	'青い鷲','黄色い星'];
 //後ろの太陽の紋章の順番
 var gUshiroIDList = [1,	14,	7,	20,	13,	6,	19,	12,	5,	18,	11,	4,	17,	10,	3,	16,	9,	2,	15,	8  ];
-//城のメッセージ
+//城のメッセージ (rev.1 2021-04-06 メッセージ変更)
 var gShiroList = 
-  ['第1の城　創始・始まり',	'第2の城　洗練・初心にかえる',	'第3の城　変容・変化・展開',	'第4の城　熟成・答えが見えてくる',	'第5の城　母体・まとめ',	'第5の城　母体・まとめ'];
+  ['第1の城　赤　始まり（創始）',	'第2の城　初心にかえる（洗練）',	'第3の城　変化・展開（変容）',	'第4の城　答えが見えてくる（熟成）',	'第5の城　まとめ（母体）',	'第5の城　緑　まとめ（母体）'];
 //城の色
 var gShiroColorList =
   ['green','red','white','blue','yellow'];
-//サイクルのメッセージ
+//サイクルのメッセージ　(rev.1 2021-04-06 メッセージ変更)
 var gCycleList = 
-  ['起「始まり（創始）」',	'承「初心にかえる（洗練）」',	'転「変化・展開（変容）」',	'結「答えが見えてくる（熟成）」'];
+  ['起　始まり（創始）',	'承　初心にかえる（洗練）',	'転　変化・展開（変容）',	'結　答えが見えてくる（熟成）'];
 //サイクルの色
 var gCycleColorList =
   ['red','white','blue','yellow'];
@@ -66,7 +67,7 @@ window.onload = onLoad;
 
     //KIN計算
     var kin =  kinCalc(yyyy,mm,dd);//指定した日付のKIN
-    
+   
     //console.log("kin" + kin);
     var kinMaeNo = kinMae(kin);//KINに応じた前の太陽の紋章
     var kinUshiroNo = kinUshiro(kin);///KINに応じた後ろの太陽の紋章
@@ -76,6 +77,8 @@ window.onload = onLoad;
     
     //
     //HTMLに値を設定
+    //
+    //銀河のマヤツォルキンで
     //
     //銀河のマヤツォルキンでは、今日は
     //KIN (99) 「(音) (前の太陽の紋章) - (後ろの太陽の紋章)」
@@ -168,8 +171,8 @@ document.getElementById("yourkin-button").onclick = function() {
   //誕生日のメッセージ
   var yourKIN = document.getElementById("yourKIN");
   yourKIN.innerHTML =  kinMsg(kin);
-  yourKIN.classList.add('bold','underline');
-  yourKIN.style.fontSize = "25px";
+  yourKIN.classList.add('bold','underline','yourKIN-class');
+  //rev.1 レスポンシブ対応のためコメントアウト yourKIN.style.fontSize = "25px";
 
   //イメージを表示する
   var kinMaeNo = kinMae(kin);//KINに応じた前の太陽の紋章

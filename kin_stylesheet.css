@@ -1,3 +1,13 @@
+/*
+    タイトル：グレートターニング様向けKIN計算ページ 
+    内容： 
+      １．今日の日付からその日のKINを算出し、メッセージを表示する。
+      ２．指定した年月のKINを算出し、メッセージを表示する。
+    初版：2021-3-29(KIN105　赤い蛇-赤い蛇　第３の城)
+    ２版：2021-4-6(メッセージ内容の変更　今日のK I Nは？変更点 20210404.docx)
+    発行元：スーパー事務局
+    グレートターニングホームページ 
+*/
 /*----- ここからレスポンシブ対応 -----*/
 * {
   box-sizing: border-box;
@@ -300,19 +310,18 @@ header {
  }
 .yourKINs-section  a{
   text-decoration: underline;
-  font-weight: bold;
   color:blue;
 }
 .calender1{
   display:inline;/*改行しない*/
 }
-#yourKIN {
-  font-size: 20px;
-}
-#yourKIN  p{
-  font-size: 20px;
+/*↓rev.1 2020-04-06 ADD start*/
+.yourKIN-class  {
+  font-size: 25px;
   padding-top:10px;
 }
+/*↑rev.1 2020-04-06 ADD end*/
+
 .yourKINImageClass{
   display:inline;/*イメージ：改行しない　サイズは200px(原寸)のまま*/
   vertical-align: center;
