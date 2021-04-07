@@ -172,7 +172,7 @@ document.getElementById("yourkin-button").onclick = function() {
   var yourKIN = document.getElementById("yourKIN");
   yourKIN.innerHTML =  kinMsg(kin);
   //rev.1 yourKIN.classList.add('bold','underline');
-  yourKIN.classList.add('bold','yourKIN-class');//アンダーライン削除 レスポンシブ対応用クラス追加
+  yourKIN.classList.add('bold','yourKIN-class','underline');//アンダーライン削除 レスポンシブ対応用クラス追加
   //rev.1 レスポンシブ対応のためコメントアウト yourKIN.style.fontSize = "25px";
 
   //イメージを表示する
