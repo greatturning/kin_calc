@@ -171,7 +171,8 @@ document.getElementById("yourkin-button").onclick = function() {
   //誕生日のメッセージ
   var yourKIN = document.getElementById("yourKIN");
   yourKIN.innerHTML =  kinMsg(kin);
-  yourKIN.classList.add('bold','underline','yourKIN-class');
+  //rev.1 yourKIN.classList.add('bold','underline');
+  yourKIN.classList.add('bold','yourKIN-class');//アンダーライン削除 レスポンシブ対応用クラス追加
   //rev.1 レスポンシブ対応のためコメントアウト yourKIN.style.fontSize = "25px";
 
   //イメージを表示する
@@ -292,8 +293,10 @@ document.getElementById("yourkin-button").onclick = function() {
     //KIN xxxx 「銀河の音(銀河の音名称)前の太陽の紋章 - 後ろの太陽の紋章」
    var msg = 
       "KIN " + kin + 
-      " 「" + otoNo +"(" + gOtoList[otoNo%13] + ")" +
-      gMaeList[idx_mae] + " - " + gUshiroList[idx_ushiro] + "」";
+      " 「" + 
+      otoNo +"(" + gOtoList[otoNo%13] + ")" +
+      gMaeList[idx_mae] + " - " + gUshiroList[idx_ushiro] 
+      + "」";
     return msg ;
    
   }
