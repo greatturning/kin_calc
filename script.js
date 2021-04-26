@@ -5,6 +5,7 @@ $(function(){
   //  ２．指定した年月のKINを算出し、メッセージを表示する。
   //初版：2021-03-29(KIN105　赤い蛇-赤い蛇　第３の城)
   //rev.1：2021-04-06(メッセージ内容の変更　今日のK I Nは？変更点 20210404.docx)
+  //rev.2：2021-04-26 今日のKINは？城メッセージ後半　起承転結を除く
   //発行元：スーパー事務局
   
   //
@@ -115,7 +116,7 @@ window.onload = onLoad;
     //dShiroMsg.classList.add( gShiroColorList[shiroNo % 5 ] ,'bold','underline');//文字色
     //(サイクル)の13日間です。
     var dCycle  = document.getElementById("dCycle");
-    dCycle.innerHTML = gCycleList[colorNo];
+    dCycle.innerHTML = gCycleList[colorNo].slice(2); //2021-04-26 メッセージから起承転結を除く
     dCycle.classList.add('marker_' + gCycleColorList[colorNo ],'bold','underline' );//マーカー 
     //dCycle.classList.add( gCycleColorList[colorNo ],'bold','underline' );//文字色
 
